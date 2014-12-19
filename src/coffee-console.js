@@ -8,7 +8,7 @@ editor.session.setTabSize(2);
 editor.setShowPrintMargin(false);
 
 var compiled = ace.edit("cc-results");
-compiled.setTheme("ace/theme/twilight");
+compiled.setTheme("ace/theme/clouds");
 compiled.session.setMode("ace/mode/javascript");
 compiled.session.setUseSoftTabs(true);
 compiled.session.setTabSize(2);
@@ -16,9 +16,7 @@ compiled.setShowPrintMargin(false);
 
 
 function compileIt(){
-    var xxx;
-
-    xxx = chrome.devtools.inspectedWindow["eval"](compiled.session.getValue(), function(result, exception) {
+    chrome.devtools.inspectedWindow["eval"](compiled.session.getValue(), function(result, exception) {
       if (exception.isError) {
         err.className = '';
         err.innerHTML = "Error " + exception.code + ": " + exception.description;
@@ -44,8 +42,8 @@ function update(){
 
 schedule = function(fn, timeout) {
     if (fn.$timer) return;
-    fn.$timer = setTimeout(function() {fn.$timer = null; fn()}, timeout || 10);
-}
+    fn.$timer = setTimeout(function() {fn.$timer = null; fn();}, timeout || 10);
+};
 
 editor.on("change", function(e){
     schedule(update, 20);
@@ -62,4 +60,4 @@ compiled.commands.addCommand(compileOptions);
 
 document.getElementById('runcc').addEventListener('click', compileIt);
 editor.session.setValue(localStorage.getItem("state" + tabId));
-schedule(function(){ editor.focus() }, 20);
+schedule(function(){ editor.focus();}, 20);
