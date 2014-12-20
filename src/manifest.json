@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "CoffeeConsole 2",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"description": "A CoffeeScript console within the Chrome Dev Tools. Updated/Fixed Version of Coffee Console.",
 	"devtools_page": "coffee.html",
     "icons": { "128": "128.png" },
