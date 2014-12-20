@@ -1,9 +1,11 @@
 var tabId = chrome.devtools.inspectedWindow.tabId;
 var err = document.getElementById('error');
 var editor = ace.edit("cc-editor");
+
 editor.setTheme("ace/theme/clouds");
 editor.session.setMode("ace/mode/coffee");
 editor.session.setUseSoftTabs(true);
+editor.session.setUseWrapMode(true);
 editor.session.setTabSize(2);
 editor.setShowPrintMargin(false);
 
@@ -11,6 +13,7 @@ var compiled = ace.edit("cc-results");
 compiled.setTheme("ace/theme/clouds");
 compiled.session.setMode("ace/mode/javascript");
 compiled.session.setUseSoftTabs(true);
+compiled.session.setUseWrapMode(true);
 compiled.session.setTabSize(2);
 compiled.setShowPrintMargin(false);
 
