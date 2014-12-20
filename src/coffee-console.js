@@ -20,14 +20,20 @@ compiled.setShowPrintMargin(false);
 
 function compileIt(){
     chrome.devtools.inspectedWindow["eval"](compiled.session.getValue(), function(result, exception) {
-      if (exception.isError) {
-        err.className = '';
-        err.innerHTML = "Error " + exception.code + ": " + exception.description;
-      }
-      if (exception.isException) {
-        err.className = '';
-        err.innerHTML = "Exception: " + exception.value;
-      }
+      if (exception && (exception.isError || exception.isException)) {
+          if (exception.isError) {
+            err.className = '';
+            err.innerHTML = "Error " + exception.code + ": " + exception.description;
+          }
+          if (exception.isException) {
+            err.className = '';
+            err.innerHTML = "Exception: " + exception.value;
+          }
+        }
+      else {
+          err.className = 'green';
+          err.innerHTML = "Done!";
+        }
     });
 }
 

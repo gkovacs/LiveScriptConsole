@@ -31,7 +31,7 @@
             position: fixed;
             bottom: 0;
             right: 0;
-            padding: 8px 90px 8px 15px;
+            padding: 8px 95px 8px 15px;
             background-color: #DDD;
             color: #900;
             font-family: Arial, Helvetica, sans-serif;
@@ -41,50 +41,57 @@
             opacity: .8;
             -webkit-transition: opacity .2s linear;
         }
+        #error.green {
+          color: #01B102;
+        }
 
         #error.is-hidden {
             opacity: 0;
+        }
+        #runcc:active {
+          background-color: #0B2850;
         }
 
         #runcc:hover {
           background-color: #1264B6;
           color: white;
-          -webkit-box-shadow: 0 0 50px rgba(255,255,255,.3);
-          box-shadow: 0 0 50px rgba(255,255,255,.3);
-          }
-
-          #runcc {
-            position: fixed;
-            right: 5px;
-            bottom: 5px;
-            z-index: 3;
         }
 
-          #runcc {
-              line-height: 1;
-              text-align: center;
-              white-space: nowrap;
-              vertical-align: top;
-              cursor: pointer;
-              border-radius: 3px;
+        #runcc {
+          position: fixed;
+          right: 5px;
+          bottom: 5px;
+          z-index: 3;
+        }
 
-              display: block;
-              padding: 5px 20px 5px;
-              margin-bottom: 0;
-              font-size: 18px;
-              color: #1264B6;
-              background-color: #fff;
-              border: 1px solid #1264B6;
-              -webkit-transition: all .2s linear;
-              -moz-transition: all .2s linear;
-              transition: all .2s linear;
-          }
+        #runcc {
+          line-height: 1;
+          text-align: center;
+          white-space: nowrap;
+          vertical-align: top;
+          cursor: pointer;
+          border-radius: 3px;
+
+          display: block;
+          padding: 5px 20px 5px;
+          margin-bottom: 0;
+          font-size: 18px;
+          color: #1264B6;
+          background-color: #fff;
+          border: 1px solid #1264B6;
+          -webkit-transition: all .2s linear;
+          -moz-transition: all .2s linear;
+          transition: all .2s linear;
+          box-shadow: none;
+          -webkit-appearance: none;
+          outline: none;
+        }
     </style>
 </head>
 <body>
     <div id="cc-editor"></div>
     <div id="cc-results"></div>
-    <div id="error">test error</div>
+    <div id="error" class="is-hidden"></div>
     <button id="runcc">Run!</button>
 
 <script src="ace/ace.js" type="text/javascript" charset="utf-8"></script>
