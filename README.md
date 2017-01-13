@@ -1,10 +1,10 @@
-# LiveScriptConsole
+# LiveScript Console
 
 A Chrome extension to allow writing of [LiveScript](http://livescript.net/) within the Web Inspector and run it within the context of the current window, just like the built-in console.
 
 ## Installation
 
-   * Available in the Chrome Web Store: https://chrome.google.com/webstore/detail/omnmkagnicpcpefgjdhngmjjoofoknfp
+   * Available in the Chrome Web Store: [LiveScript Console](https://chrome.google.com/webstore/detail/livescriptconsole/omnmkagnicpcpefgjdhngmjjoofoknfp)
 
 ## Features
 
