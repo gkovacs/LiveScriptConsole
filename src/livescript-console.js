@@ -3,7 +3,7 @@ var err = document.getElementById('error');
 var editor = ace.edit("cc-editor");
 
 editor.setTheme("ace/theme/clouds");
-editor.session.setMode("ace/mode/coffee");
+editor.session.setMode("ace/mode/livescript");
 editor.session.setUseSoftTabs(true);
 editor.session.setUseWrapMode(true);
 editor.session.setTabSize(2);
@@ -11,7 +11,7 @@ editor.setShowPrintMargin(false);
 
 var compiled = ace.edit("cc-results");
 compiled.setTheme("ace/theme/clouds");
-compiled.session.setMode("ace/mode/javascript");
+compiled.session.setMode("ace/mode/livescript");
 compiled.session.setUseSoftTabs(true);
 compiled.session.setUseWrapMode(true);
 compiled.session.setTabSize(2);
@@ -39,7 +39,8 @@ function compileIt(){
 
 function update(){
     try {
-        var compiledSource = CoffeeScript.compile( editor.session.getValue(), {bare:true});
+        LiveScript = require('livescript');
+        var compiledSource = LiveScript.compile( editor.session.getValue(), {bare:true, header: false});
         compiled.session.setValue(compiledSource);
         err.className = 'is-hidden';
     } catch (error) {

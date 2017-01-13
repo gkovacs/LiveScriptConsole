@@ -1,7 +1,7 @@
 chrome.devtools.panels.create(
-    "CoffeeConsole",
+    "LiveScriptConsole",
     "badge.png",
-    "coffee-console.html",
+    "livescript-console.html",
     function cb(panel) {
         panel.onShown.addListener(function(win){ win.focus(); });
     }

@@ -1,8 +1,9 @@
 {
 	"manifest_version": 2,
-	"name": "CoffeeConsole 2",
-	"version": "2.0.2",
-	"description": "A CoffeeScript console within the Chrome Dev Tools. Updated/Fixed Version of Coffee Console.",
+	"name": "LiveScriptConsole",
+	"author": "Geza Kovacs",
+	"version": "1.0.0",
+	"description": "A LiveScript console within the Chrome Dev Tools. Based on Coffee Console 2.",
 	"devtools_page": "coffee.html",
     "icons": { "128": "128.png" },
 	"minimum_chrome_version" : "18",
