@@ -3,7 +3,7 @@
 	"name": "LiveScriptConsole",
 	"short_name": "lsconsole",
 	"author": "Geza Kovacs",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A LiveScript console within the Chrome Dev Tools. Based on Coffee Console 2.",
 	"devtools_page": "coffee.html",
     "icons": { "128": "128.png" },
